@@ -1,0 +1,24 @@
+.BONSAI(1)
+.SH NAME
+bonsai \- A minimalist OpenBSD setup tool
+
+.SH SYNOPSIS
+bonsai.pl [options]
+
+.SH DESCRIPTION
+.B bonsai
+is a setup tool designed to configure a minimalistic OpenBSD environment.
+
+.SH OPTIONS
+.TP
+.B --dry-run
+Display what would be done without making changes.
+.TP
+.B --help
+Display a help message and exit.
+.TP
+.B --man
+Display this manual page and exit.
+.SH AUTHOR
+Created by the bonsai project.
+
