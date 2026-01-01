@@ -1,24 +1,107 @@
-.BONSAI(1)
+.TH BONSAI 1 "January 2026" "bonsai 0.2.0" "User Commands"
 .SH NAME
 bonsai \- A minimalist OpenBSD setup tool
-
 .SH SYNOPSIS
-bonsai.pl [options]
-
+.B bonsai.pl
+[\fIOPTIONS\fR]
 .SH DESCRIPTION
 .B bonsai
-is a setup tool designed to configure a minimalistic OpenBSD environment.
-
+is a setup tool designed to configure a minimalistic OpenBSD desktop environment.
+It configures window managers, shells, browsers, theming, and essential applications
+following the suckless philosophy.
+.PP
+Configuration is stored in \fI~/.config/bonsai/config.conf\fR and can be customized
+either by editing the file directly or using interactive mode.
 .SH OPTIONS
 .TP
-.B --dry-run
-Display what would be done without making changes.
+.B \-\-dry\-run
+Display what would be done without making changes. Useful for previewing
+the setup process before committing.
 .TP
-.B --help
+.B \-\-interactive
+Run in interactive mode, prompting for each configuration option.
+Selections are saved to the config file.
+.TP
+.B \-\-config
+Generate or update the config file only, without running the setup.
+.TP
+.B \-\-help
 Display a help message and exit.
 .TP
-.B --man
+.B \-\-man
 Display this manual page and exit.
+.TP
+.B \-\-version
+Display version information and exit.
+.SH CONFIGURATION
+The configuration file supports the following options:
+.TP
+.B window_manager
+Window manager to configure (cwm, spectrwm, i3, dwm, bspwm, openbox).
+Default: cwm
+.TP
+.B shell
+Shell to install and set as default (ksh, fish, zsh, bash).
+Default: ksh
+.TP
+.B browser
+Web browser to install (firefox, librewolf, chromium, lynx).
+Default: firefox
+.TP
+.B theme
+Color theme for terminals (nord, gruvbox, dracula).
+Default: nord
+.TP
+.B xorg_resolution
+Display resolution for Xorg.
+Default: 1920x1080
+.TP
+.B xorg_brightness
+Screen brightness percentage (0\-100).
+Default: 80
+.SH FILES
+.TP
+.I ~/.config/bonsai/config.conf
+User configuration file.
+.TP
+.I ~/.xinitrc
+Generated X initialization script.
+.TP
+.I ~/.xsession
+Generated X session script for xenodm.
+.TP
+.I ~/.Xresources
+X resources with theme colors and font settings.
+.SH EXAMPLES
+Run setup with default or saved configuration:
+.PP
+.RS
+.nf
+bonsai.pl
+.fi
+.RE
+.PP
+Preview changes without applying them:
+.PP
+.RS
+.nf
+bonsai.pl \-\-dry\-run
+.fi
+.RE
+.PP
+Run interactive setup:
+.PP
+.RS
+.nf
+bonsai.pl \-\-interactive
+.fi
+.RE
+.SH SEE ALSO
+.BR cwm (1),
+.BR pkg_add (1),
+.BR startx (1),
+.BR xenodm (1)
 .SH AUTHOR
 Created by the bonsai project.
-
+.br
+https://github.com/raffaelschneider/bonsai
