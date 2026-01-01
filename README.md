@@ -109,13 +109,31 @@ xorg_resolution = 1920x1080
 | `SSHAgent.pm` | Sets up keychain for SSH |
 | `DefaultApps.pm` | Installs essential applications |
 
+See [docs/modules.md](docs/modules.md) for detailed module documentation.
+
+## Documentation
+
+- [Getting Started](docs/getting-started.md) - First-time setup guide
+- [Customization](docs/customization.md) - How to customize your setup
+- [Troubleshooting](docs/troubleshooting.md) - Common issues and solutions
+- [Module Reference](docs/modules.md) - Detailed module documentation
+- [Example Config](config/example.conf) - Annotated configuration file
+
 ## Contributing
 
-Contributions are welcome! If you have ideas for new modules or improvements, feel free to submit pull requests or open issues.
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on:
+- Reporting bugs
+- Suggesting features
+- Submitting pull requests
+- Adding new modules
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for version history and release notes.
 
 ## Acknowledgments
 
